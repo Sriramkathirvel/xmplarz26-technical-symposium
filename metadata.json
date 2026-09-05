@@ -1,0 +1,6 @@
+{
+  "name": "XMPLARZ’26",
+  "description": "National Level Technical Symposium organized by the Department of Computer Science and Engineering, Mahendra Institute of Technology on 30th September 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

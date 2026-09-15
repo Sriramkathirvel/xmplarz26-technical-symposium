@@ -129,11 +129,6 @@ export const IMPORTANT_DATES: ImportantDate[] = [
     description: "Official online portal open for registrations and abstract submissions."
   },
   {
-    date: "26.09.2026",
-    title: "Last Submission Date",
-    description: "Deadline to complete registration and submit technical papers/projects."
-  },
-  {
     date: "30.09.2026",
     title: "XMPLARZ’26 Event Day",
     description: "The national symposium opens at Mahendra Institute of Technology campus.",

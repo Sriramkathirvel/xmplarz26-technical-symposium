@@ -28,12 +28,20 @@
     font-family: 'JetBrains Mono', monospace;
   }
 
+  .font-tech {
+    font-family: 'Orbitron', 'Outfit', sans-serif;
+  }
+
+  .font-space {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  }
+
   .font-handwriting {
-    font-family: 'Caveat', 'Kalam', cursive;
+    font-family: 'Caveat', 'Kalam', 'Dancing Script', cursive;
   }
 }
 
-/* Brand Website Gradient & Handwritten Accent Utility Classes */
+/* Brand Website Gradient & Stylish Accent Utility Classes */
 .text-gradient-brand {
   background: linear-gradient(135deg, #123B8F 0%, #168BFF 35%, #6C3BFF 70%, #F5B82E 100%);
   background-size: 200% auto;
@@ -44,7 +52,7 @@
 }
 
 .text-gradient-brand-handwriting {
-  font-family: 'Caveat', 'Kalam', cursive;
+  font-family: 'Caveat', 'Kalam', 'Dancing Script', cursive;
   background: linear-gradient(120deg, #123B8F 0%, #168BFF 30%, #6C3BFF 65%, #F5B82E 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -52,8 +60,16 @@
   background-clip: text;
   display: inline-block;
   font-weight: 700;
-  padding-right: 0.12em;
-  filter: drop-shadow(0 2px 8px rgba(22, 139, 255, 0.25));
+  padding-right: 0.15em;
+  padding-left: 0.05em;
+  filter: drop-shadow(0 3px 10px rgba(22, 139, 255, 0.3));
+  transform: rotate(-1deg);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.text-gradient-brand-handwriting:hover {
+  transform: rotate(0deg) scale(1.03);
+  filter: drop-shadow(0 4px 16px rgba(22, 139, 255, 0.45));
 }
 
 /* Subtle Technical Grid & Dot Backgrounds */
@@ -274,6 +290,92 @@
 .animate-ambient-glow-reverse {
   animation: ambient-glow-reverse 20s ease-in-out infinite;
 }
+
+/* Futuristic Loading Page Animation & Theme Utilities */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse-slow {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes scan-beam {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+@keyframes float-particle {
+  0%, 100% { transform: translateY(0px) scale(1); opacity: 0.4; }
+  50% { transform: translateY(-15px) scale(1.2); opacity: 0.9; }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 24s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spin-reverse-slow 30s linear infinite;
+}
+
+.animate-scan-beam {
+  animation: scan-beam 3.5s ease-in-out infinite;
+}
+
+.animate-float-particle {
+  animation: float-particle 5s ease-in-out infinite;
+}
+
+.bg-cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(22, 139, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(22, 139, 255, 0.07) 1px, transparent 1px);
+}
+
+.glow-blue-neon {
+  text-shadow: 0 0 12px rgba(22, 139, 255, 0.8), 0 0 24px rgba(22, 139, 255, 0.4);
+}
+
+.glow-gold-neon {
+  text-shadow: 0 0 12px rgba(245, 184, 46, 0.8), 0 0 24px rgba(245, 184, 46, 0.4);
+}
+
+/* Layer Waver Fluid Background Animations */
+@keyframes wave-flow-1 {
+  0% { transform: translateX(0) translateZ(0) scaleY(1); }
+  50% { transform: translateX(-25%) translateZ(0) scaleY(1.12); }
+  100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
+}
+
+@keyframes wave-flow-2 {
+  0% { transform: translateX(0) translateZ(0) scaleY(1); }
+  50% { transform: translateX(25%) translateZ(0) scaleY(0.9); }
+  100% { transform: translateX(50%) translateZ(0) scaleY(1); }
+}
+
+@keyframes wave-flow-3 {
+  0% { transform: translateX(-20%) translateZ(0) scaleY(1.05); }
+  50% { transform: translateX(10%) translateZ(0) scaleY(1.2); }
+  100% { transform: translateX(-20%) translateZ(0) scaleY(1.05); }
+}
+
+.animate-wave-flow-1 {
+  animation: wave-flow-1 18s ease-in-out infinite alternate;
+}
+
+.animate-wave-flow-2 {
+  animation: wave-flow-2 22s ease-in-out infinite alternate;
+}
+
+.animate-wave-flow-3 {
+  animation: wave-flow-3 26s ease-in-out infinite alternate;
+}
+
+
 
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

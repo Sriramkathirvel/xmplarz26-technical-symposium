@@ -56,7 +56,7 @@ export const EnquirySection: React.FC = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111827] tracking-tight font-display mb-3">
-            Have Questions? <span className="text-[#168BFF]">Send an Enquiry.</span>
+            Have Questions? <span className="text-gradient-brand-handwriting text-4xl sm:text-5xl lg:text-6xl">Send an Enquiry.</span>
           </h2>
 
           <p className="text-sm sm:text-base text-[#64748B] leading-relaxed">

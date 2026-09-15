@@ -157,7 +157,7 @@ export const EventModal: React.FC<EventModalProps> = ({
                 <li>Every participating team must contain exactly two members.</li>
                 <li>Registration fee: {SYMPOSIUM_INFO.registrationFee} per team.</li>
                 <li>Registration is processed strictly through the official Google Form.</li>
-                <li>All submissions commence on {SYMPOSIUM_INFO.submissionStarts} and conclude on {SYMPOSIUM_INFO.lastSubmissionDate}.</li>
+                <li>All submissions commence on {SYMPOSIUM_INFO.submissionStarts}.</li>
               </ul>
             </div>
           </div>

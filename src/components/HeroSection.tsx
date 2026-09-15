@@ -69,14 +69,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
       {/* Main Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full my-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           
-          {/* LEFT EDITORIAL COLUMN (Cols 1-7) */}
+          {/* EDITORIAL COLUMN */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="lg:col-span-7 flex flex-col items-start text-left"
+            className="flex flex-col items-center text-center w-full"
           >
             {/* National Level Tag */}
             <div className="mb-4">
@@ -90,7 +90,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Soft Ambient Backlight Glow Aura on Hover */}
               <div className="absolute -inset-3 bg-gradient-to-r from-[#168BFF]/10 via-[#6C3BFF]/10 to-[#F5B82E]/15 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none" />
               
-              <h1 className="relative z-10 text-[48px] xs:text-[60px] sm:text-7xl lg:text-8xl xl:text-[96px] font-black leading-[0.88] sm:leading-[0.9] tracking-tighter font-display transition-transform duration-300 group-hover:scale-[1.01] flex items-center flex-wrap sm:flex-nowrap">
+              <h1 className="relative z-10 text-[48px] xs:text-[60px] sm:text-7xl lg:text-8xl xl:text-[96px] font-black leading-[0.88] sm:leading-[0.9] tracking-tighter font-display transition-transform duration-300 group-hover:scale-[1.01] flex items-center justify-center flex-wrap sm:flex-nowrap">
                 <span className="flex items-center">
                   {blueLetters.map((char, i) => (
                     <motion.span
@@ -128,7 +128,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </p>
 
             {/* Event Key Metrics Row - Mobile Enhanced Grid */}
-            <div className="w-full grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:items-center sm:gap-8 mt-2 sm:mt-4 py-2 sm:py-6 sm:border-y sm:border-[#E8EEF8]">
+            <div className="w-full grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-8 mt-2 sm:mt-4 py-2 sm:py-6 sm:border-y sm:border-[#E8EEF8]">
               <div className="p-3 sm:p-0 rounded-xl bg-white border border-[#E8EEF8] sm:bg-transparent sm:border-none shadow-2xs sm:shadow-none">
                 <p className="text-[9px] xs:text-[10px] text-[#64748B] uppercase font-extrabold tracking-widest mb-0.5 sm:mb-1 font-mono-code">
                   Event Date
@@ -173,7 +173,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             {/* Call to Actions */}
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 w-full sm:w-auto">
               <a
                 href="#register"
                 id="hero-btn-register"
@@ -206,94 +206,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </a>
             </div>
 
-            <p className="text-[11px] sm:text-xs text-[#64748B] mt-5 font-mono-code flex items-center gap-2">
+            <p className="text-[11px] sm:text-xs text-[#64748B] mt-5 font-mono-code flex items-center justify-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#168BFF] shrink-0" />
               <span>Department of Computer Science & Engineering • MIT Mallasamudram</span>
             </p>
           </motion.div>
-
-          {/* RIGHT TECHNICAL PANEL: CRITICAL MILESTONES & CSE EMBLEM (Cols 8-12) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-            className="lg:col-span-5 relative w-full"
-          >
-            <div className="w-full bg-[#F4F8FF] flex flex-col p-6 sm:p-8 rounded-2xl border border-[#E8EEF8] relative overflow-hidden shadow-xs card-hover-modern">
-              
-              {/* Corner Decorative Dot Cluster */}
-              <div className="absolute top-4 right-4 pointer-events-none opacity-25">
-                <div className="flex flex-col gap-1 items-end">
-                  <div className="flex gap-1">
-                    <div className="w-1 h-1 bg-[#123B8F] rounded-full" />
-                    <div className="w-1 h-1 bg-[#123B8F] rounded-full" />
-                    <div className="w-1 h-1 bg-[#123B8F] rounded-full" />
-                  </div>
-                  <div className="flex gap-1">
-                    <div className="w-1 h-1 bg-[#123B8F] rounded-full" />
-                    <div className="w-1 h-1 bg-[#123B8F] rounded-full" />
-                    <div className="w-1 h-1 bg-[#123B8F] rounded-full" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Panel Heading */}
-              <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-[#123B8F] mb-6 flex items-center gap-2 font-mono-code">
-                <div className="w-2 h-2 bg-[#F5B82E] rounded-full" />
-                Critical Milestones
-              </h3>
-
-              {/* Milestones Stepper */}
-              <div className="space-y-6 relative">
-                {/* Vertical Stepper Line */}
-                <div className="absolute left-2.5 top-2 bottom-2 w-0.5 bg-[#123B8F]/10" />
-
-                {/* Milestone 1: SEP 20 */}
-                <div className="relative pl-10">
-                  <div className="absolute left-0 top-0.5 w-5 h-5 rounded-full bg-white border-4 border-[#168BFF]" />
-                  <p className="text-[11px] font-bold text-[#168BFF] mb-0.5 font-mono-code">
-                    SEP 20, 2026
-                  </p>
-                  <h4 className="font-bold text-[#123B8F] text-sm font-display">
-                    Submissions Start
-                  </h4>
-                  <p className="text-xs text-[#64748B] mt-0.5">
-                    IEEE Format Research Papers & Project Abstracts
-                  </p>
-                </div>
-
-                {/* Milestone 2: SEP 26 */}
-                <div className="relative pl-10">
-                  <div className="absolute left-0 top-0.5 w-5 h-5 rounded-full bg-white border-4 border-[#6C3BFF]" />
-                  <p className="text-[11px] font-bold text-[#6C3BFF] mb-0.5 font-mono-code">
-                    SEP 26, 2026
-                  </p>
-                  <h4 className="font-bold text-[#123B8F] text-sm font-display">
-                    Final Entry Deadline
-                  </h4>
-                  <p className="text-xs text-[#64748B] mt-0.5">
-                    Last date for team registration & paper uploads
-                  </p>
-                </div>
-
-                {/* Milestone 3: SEP 30 */}
-                <div className="relative pl-10">
-                  <div className="absolute left-0 top-0.5 w-5 h-5 rounded-full bg-[#F5B82E] border-4 border-white shadow-md" />
-                  <p className="text-[11px] font-bold text-[#F5B82E] mb-0.5 font-mono-code">
-                    SEP 30, 2026
-                  </p>
-                  <h4 className="font-bold text-[#123B8F] text-sm font-display">
-                    Grand Opening & Events
-                  </h4>
-                  <p className="text-xs text-[#64748B] mt-0.5">
-                    Symposium commences at 08:30 AM on MIT Campus
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </motion.div>
-
         </div>
       </div>
 

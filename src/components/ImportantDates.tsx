@@ -29,9 +29,9 @@ export const ImportantDates: React.FC = () => {
         {/* DESKTOP TIMELINE (Horizontal) */}
         <div className="hidden md:block relative my-12">
           {/* Connecting Track Line */}
-          <div className="absolute top-[38px] left-20 right-20 h-0.5 bg-[#123B8F]/10 z-0" />
+          <div className="absolute top-[38px] left-28 right-28 h-0.5 bg-[#123B8F]/10 z-0" />
           
-          <div className="grid grid-cols-3 gap-8 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto relative z-10">
             {IMPORTANT_DATES.map((item, index) => {
               const isEventDay = item.isMainEvent;
               return (
@@ -163,7 +163,7 @@ export const ImportantDates: React.FC = () => {
         <div className="mt-12 text-center">
           <p className="text-xs sm:text-sm text-[#64748B] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F4F8FF] border border-[#E8EEF8]">
             <Clock className="w-4 h-4 text-[#168BFF]" />
-            <span>Submissions close strictly at 11:59 PM on 26.09.2026.</span>
+            <span>Submissions close strictly at 11:59 PM on 20.09.2026.</span>
           </p>
         </div>
 

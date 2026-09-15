@@ -51,19 +51,30 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onRegisterClick })
           </p>
 
           {/* Interactive Category Tabs */}
-          <div className="mt-8 inline-flex p-1.5 rounded-2xl bg-white border border-[#E8EEF8] shadow-sm">
+          <div className="mt-8 inline-flex items-center p-1.5 rounded-2xl bg-white/90 backdrop-blur-md border border-[#E8EEF8] shadow-lg shadow-blue-950/5 ring-1 ring-slate-900/5 relative select-none">
             <button
               type="button"
               onClick={() => setActiveTab('technical')}
-              className={`relative inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 cursor-pointer ${
-                activeTab === 'technical'
-                  ? 'text-white btn-primary-gradient shadow-md shadow-blue-900/20 scale-[1.02]'
-                  : 'text-[#64748B] hover:text-[#123B8F] hover:bg-[#F4F8FF]'
+              className={`relative z-10 inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3 rounded-xl text-xs sm:text-sm font-extrabold transition-colors duration-200 cursor-pointer ${
+                activeTab === 'technical' ? 'text-white' : 'text-[#64748B] hover:text-[#123B8F]'
               }`}
             >
-              <Code className="w-4 h-4" />
-              <span>Technical Events</span>
-              <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono-code font-extrabold ${activeTab === 'technical' ? 'bg-white/20 text-white' : 'bg-slate-100 text-[#123B8F]'}`}>
+              {activeTab === 'technical' && (
+                <motion.div
+                  layoutId="activeCategoryTabPill"
+                  className="absolute inset-0 bg-gradient-to-r from-[#123B8F] via-[#168BFF] to-[#2563EB] rounded-xl shadow-md shadow-blue-600/30 -z-10"
+                  transition={{ type: 'spring', stiffness: 450, damping: 35 }}
+                />
+              )}
+              <Code className={`w-4 h-4 transition-transform duration-200 ${activeTab === 'technical' ? 'scale-110 text-white' : 'text-[#168BFF]'}`} />
+              <span className="font-display tracking-tight">Technical Events</span>
+              <span
+                className={`text-[10px] px-2.5 py-0.5 rounded-full font-mono-code font-extrabold transition-all duration-200 ${
+                  activeTab === 'technical'
+                    ? 'bg-white/20 text-white border border-white/25 shadow-xs'
+                    : 'bg-[#F4F8FF] text-[#123B8F] border border-[#E8EEF8]'
+                }`}
+              >
                 4
               </span>
             </button>
@@ -71,15 +82,26 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onRegisterClick })
             <button
               type="button"
               onClick={() => setActiveTab('non-technical')}
-              className={`relative inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 cursor-pointer ${
-                activeTab === 'non-technical'
-                  ? 'text-white btn-primary-gradient shadow-md shadow-blue-900/20 scale-[1.02]'
-                  : 'text-[#64748B] hover:text-[#123B8F] hover:bg-[#F4F8FF]'
+              className={`relative z-10 inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer ${
+                activeTab === 'non-technical' ? 'text-white' : 'text-[#64748B] hover:text-[#123B8F]'
               }`}
             >
-              <Sparkles className="w-4 h-4" />
-              <span>Non-Technical Events</span>
-              <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono-code font-extrabold ${activeTab === 'non-technical' ? 'bg-white/20 text-white' : 'bg-slate-100 text-[#123B8F]'}`}>
+              {activeTab === 'non-technical' && (
+                <motion.div
+                  layoutId="activeCategoryTabPill"
+                  className="absolute inset-0 bg-gradient-to-r from-[#123B8F] via-[#168BFF] to-[#2563EB] rounded-xl shadow-md shadow-blue-600/30 -z-10"
+                  transition={{ type: 'spring', stiffness: 450, damping: 35 }}
+                />
+              )}
+              <Sparkles className={`w-4 h-4 transition-transform duration-200 ${activeTab === 'non-technical' ? 'scale-110 text-white' : 'text-[#F5B82E]'}`} />
+              <span className="font-display tracking-tight">Non-Technical Events</span>
+              <span
+                className={`text-[10px] px-2.5 py-0.5 rounded-full font-mono-code font-extrabold transition-all duration-200 ${
+                  activeTab === 'non-technical'
+                    ? 'bg-white/20 text-white border border-white/25 shadow-xs'
+                    : 'bg-[#F4F8FF] text-[#123B8F] border border-[#E8EEF8]'
+                }`}
+              >
                 4
               </span>
             </button>

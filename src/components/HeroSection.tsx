@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'motion/react';
-import { ArrowUpRight, ChevronDown, Calendar, Sparkles, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, Calendar, Sparkles, ShieldCheck, MapPin, Tag } from 'lucide-react';
 import { SYMPOSIUM_INFO } from '../data/eventData';
 
 interface HeroSectionProps {
@@ -79,9 +79,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             className="flex flex-col items-center text-center w-full"
           >
             {/* National Level Tag */}
-            <div className="mb-4">
-              <span className="inline-block px-3 py-1.5 sm:py-1 bg-[#F4F8FF] border border-[#168BFF]/20 rounded-lg text-[10px] sm:text-[11px] font-extrabold text-[#168BFF] uppercase tracking-[0.18em]">
-                National Level Technical Symposium
+            <div className="mb-4 max-w-full px-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:py-1.5 bg-sky-500/10 border border-sky-400/30 rounded-full text-[9px] xs:text-[10px] sm:text-[11px] font-mono-code font-extrabold text-sky-400 uppercase tracking-[0.08em] xs:tracking-[0.14em] sm:tracking-[0.18em] shadow-[0_0_12px_rgba(56,189,248,0.15)] whitespace-nowrap">
+                <Sparkles className="w-3 h-3 text-sky-400 animate-pulse shrink-0" />
+                <span>National Level Technical Symposium</span>
               </span>
             </div>
 
@@ -127,53 +128,80 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               “The power to <span className="text-gradient-brand-handwriting text-xl xs:text-2xl sm:text-3xl">change the world.”</span>
             </p>
 
-            {/* Event Key Metrics Row - Mobile Enhanced Grid */}
-            <div className="w-full grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-8 mt-2 sm:mt-4 py-2 sm:py-6 sm:border-y sm:border-[#E8EEF8]">
-              <div className="p-3 sm:p-0 rounded-xl bg-white border border-[#E8EEF8] sm:bg-transparent sm:border-none shadow-2xs sm:shadow-none">
-                <p className="text-[9px] xs:text-[10px] text-[#64748B] uppercase font-extrabold tracking-widest mb-0.5 sm:mb-1 font-mono-code">
-                  Event Date
-                </p>
-                <p className="text-xs xs:text-sm sm:text-lg font-extrabold text-[#123B8F]">
-                  30th SEP 2026
-                </p>
+            {/* Event Key Metrics - Floating Cyber Capsule Dock (Mobile Enhanced & Desktop Preserved) */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
+              className="w-full max-w-xs xs:max-w-sm sm:max-w-3xl mx-auto my-5 sm:my-7"
+            >
+              <div className="relative p-2 xs:p-2.5 sm:p-3 rounded-2xl sm:rounded-full bg-[#0B0F19]/90 border border-[#168BFF]/30 backdrop-blur-2xl shadow-[0_12px_40px_-8px_rgba(0,0,0,0.8),0_0_25px_rgba(22,139,255,0.18)]">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-0">
+                  
+                  {/* Item 1: Event Date */}
+                  <div className="flex-1 px-3.5 py-2.5 sm:py-2 rounded-xl sm:rounded-full hover:bg-[#168BFF]/10 transition-all duration-200 flex items-center justify-start sm:justify-start gap-3 group cursor-default">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#168BFF]/15 border border-[#168BFF]/35 text-[#38BDF8] flex items-center justify-center group-hover:scale-110 group-hover:bg-[#168BFF]/25 transition-all shrink-0 shadow-[0_0_12px_rgba(56,189,248,0.25)]">
+                      <Calendar className="w-4 h-4 text-[#38BDF8]" />
+                    </div>
+                    <div className="text-left min-w-0">
+                      <p className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest text-slate-400 font-mono-code leading-none mb-0.5 sm:mb-1 truncate">
+                        Event Date
+                      </p>
+                      <p className="text-xs sm:text-sm md:text-base font-black text-[#38BDF8] font-display leading-tight group-hover:text-blue-200 transition-colors truncate">
+                        {SYMPOSIUM_INFO.eventDate}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Horizontal Divider 1 (Mobile view) */}
+                  <div className="h-px w-[92%] mx-auto bg-gradient-to-r from-transparent via-[#168BFF]/25 to-transparent sm:hidden" />
+
+                  {/* Vertical Divider 1 (Desktop view) */}
+                  <div className="w-px h-8 bg-gradient-to-b from-transparent via-[#168BFF]/35 to-transparent hidden sm:block shrink-0" />
+
+                  {/* Item 2: Registration Fee */}
+                  <div className="flex-1 px-3.5 py-2.5 sm:py-2 rounded-xl sm:rounded-full hover:bg-[#168BFF]/10 transition-all duration-200 flex items-center justify-start sm:justify-start gap-3 group cursor-default">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#168BFF]/15 border border-[#168BFF]/35 text-[#38BDF8] flex items-center justify-center group-hover:scale-110 group-hover:bg-[#168BFF]/25 transition-all shrink-0 shadow-[0_0_12px_rgba(56,189,248,0.25)]">
+                      <Tag className="w-4 h-4 text-[#38BDF8]" />
+                    </div>
+                    <div className="text-left min-w-0">
+                      <p className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest text-slate-400 font-mono-code leading-none mb-0.5 sm:mb-1 truncate">
+                        Reg Fee
+                      </p>
+                      <p className="text-xs sm:text-sm md:text-base font-black text-[#38BDF8] font-display leading-tight group-hover:text-blue-200 transition-colors truncate">
+                        ₹250 <span className="text-[10px] sm:text-xs font-semibold text-slate-400">/ Head</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Horizontal Divider 2 (Mobile view) */}
+                  <div className="h-px w-[92%] mx-auto bg-gradient-to-r from-transparent via-[#168BFF]/25 to-transparent sm:hidden" />
+
+                  {/* Vertical Divider 2 (Desktop view) */}
+                  <div className="w-px h-8 bg-gradient-to-b from-transparent via-[#168BFF]/35 to-transparent hidden sm:block shrink-0" />
+
+                  {/* Item 3: Venue */}
+                  <div className="flex-1 px-3.5 py-2.5 sm:py-2 rounded-xl sm:rounded-full hover:bg-[#168BFF]/10 transition-all duration-200 flex items-center justify-start sm:justify-start gap-3 group cursor-default">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#168BFF]/15 border border-[#168BFF]/35 text-[#38BDF8] flex items-center justify-center group-hover:scale-110 group-hover:bg-[#168BFF]/25 transition-all shrink-0 shadow-[0_0_12px_rgba(56,189,248,0.25)]">
+                      <MapPin className="w-4 h-4 text-[#38BDF8]" />
+                    </div>
+                    <div className="text-left min-w-0">
+                      <p className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest text-slate-400 font-mono-code leading-none mb-0.5 sm:mb-1 truncate">
+                        Venue
+                      </p>
+                      <p className="text-xs sm:text-sm md:text-base font-black text-[#38BDF8] font-display leading-tight group-hover:text-blue-200 transition-colors truncate">
+                        MIT Campus
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
               </div>
-
-              <div className="w-px h-10 bg-[#E8EEF8] hidden sm:block" />
-
-              <div className="p-3 sm:p-0 rounded-xl bg-white border border-[#E8EEF8] sm:bg-transparent sm:border-none shadow-2xs sm:shadow-none">
-                <p className="text-[9px] xs:text-[10px] text-[#64748B] uppercase font-extrabold tracking-widest mb-0.5 sm:mb-1 font-mono-code">
-                  Registration Fee
-                </p>
-                <p className="text-xs xs:text-sm sm:text-lg font-extrabold text-[#123B8F]">
-                  ₹250 / Head
-                </p>
-              </div>
-
-              <div className="w-px h-10 bg-[#E8EEF8] hidden sm:block" />
-
-              <div className="p-3 sm:p-0 rounded-xl bg-white border border-[#E8EEF8] sm:bg-transparent sm:border-none shadow-2xs sm:shadow-none">
-                <p className="text-[9px] xs:text-[10px] text-[#64748B] uppercase font-extrabold tracking-widest mb-0.5 sm:mb-1 font-mono-code">
-                  Venue
-                </p>
-                <p className="text-xs xs:text-sm sm:text-lg font-extrabold text-[#123B8F] underline decoration-[#F5B82E] decoration-2">
-                  MIT Campus
-                </p>
-              </div>
-
-              <div className="w-px h-10 bg-[#E8EEF8] hidden md:block" />
-
-              <div className="p-3 sm:p-0 rounded-xl bg-white border border-[#E8EEF8] sm:bg-transparent sm:border-none shadow-2xs sm:shadow-none">
-                <p className="text-[9px] xs:text-[10px] text-[#64748B] uppercase font-extrabold tracking-widest mb-0.5 sm:mb-1 font-mono-code">
-                  Participation
-                </p>
-                <p className="text-xs xs:text-sm sm:text-lg font-extrabold text-[#123B8F]">
-                  All Events
-                </p>
-              </div>
-            </div>
+            </motion.div>
 
             {/* Call to Actions */}
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 w-full sm:w-auto">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto">
+              {/* Primary CTA: Secure Spot Now */}
               <a
                 href="#register"
                 id="hero-btn-register"
@@ -183,14 +211,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     onRegisterClick();
                   }
                 }}
-                className="btn-primary-gradient text-white px-6 sm:px-10 py-3.5 sm:py-4 rounded-2xl text-sm sm:text-base font-extrabold flex items-center justify-center gap-3 group shadow-xl hover:scale-[1.02] active:scale-95 transition-all cursor-pointer border border-blue-400/20 w-full sm:w-auto"
+                className="relative group px-7 sm:px-9 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-[#0EA5E9] via-[#2563EB] to-[#6366F1] text-white text-sm sm:text-base font-black tracking-wide shadow-[0_10px_32px_-6px_rgba(14,165,233,0.55),0_0_20px_rgba(37,99,235,0.35)] hover:shadow-[0_16px_40px_-6px_rgba(14,165,233,0.75),0_0_30px_rgba(99,102,241,0.55)] hover:scale-[1.03] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 border border-cyan-300/35 overflow-hidden cursor-pointer w-full sm:w-auto"
               >
-                <span>Secure Spot Now</span>
-                <div className="w-6 h-6 rounded-full bg-[#F5B82E] text-[#123B8F] flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-transform shadow-2xs shrink-0">
-                  <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+                {/* Shimmer sweep line */}
+                <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/25 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-in-out pointer-events-none" />
+
+                <span className="relative z-10">Secure Spot Now</span>
+                <div
+                  className="relative z-10 w-7 h-7 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-transform shrink-0 shadow-md"
+                  style={{ backgroundColor: '#F5B82E' }}
+                >
+                  <ArrowUpRight className="w-4 h-4 stroke-[2.5] text-[#030712]" />
                 </div>
               </a>
 
+              {/* Secondary CTA: Explore Events Guide */}
               <a
                 href="#events"
                 id="hero-btn-explore"
@@ -200,13 +235,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     onExploreClick();
                   }
                 }}
-                className="btn-outline-tech px-6 sm:px-10 py-3.5 sm:py-4 rounded-2xl text-sm sm:text-base font-extrabold transition-all shadow-2xs hover:scale-[1.02] active:scale-95 cursor-pointer flex items-center justify-center gap-2 w-full sm:w-auto"
+                className="relative group px-7 sm:px-9 py-3.5 sm:py-4 rounded-2xl bg-slate-900/90 backdrop-blur-xl text-sky-300 hover:text-white text-sm sm:text-base font-extrabold tracking-wide border-2 border-sky-400/40 hover:border-sky-400 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.6)] hover:shadow-[0_10px_30px_-4px_rgba(56,189,248,0.4)] hover:bg-slate-800/90 hover:scale-[1.03] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer w-full sm:w-auto"
               >
+                <Sparkles className="w-4 h-4 text-sky-400 group-hover:text-amber-300 group-hover:rotate-12 transition-all duration-300" />
                 <span>Explore Events Guide</span>
               </a>
             </div>
 
-            <p className="text-[11px] sm:text-xs text-[#64748B] mt-5 font-mono-code flex items-center justify-center gap-2">
+            <p className="text-[11px] sm:text-xs text-slate-400 mt-10 sm:mt-14 md:mt-16 font-mono-code flex items-center justify-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#168BFF] shrink-0" />
               <span>Department of Computer Science & Engineering • MIT Mallasamudram</span>
             </p>
@@ -215,13 +251,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       {/* Subtle Bottom Indicator: Scroll to explore */}
-      <div className="relative z-10 flex flex-col items-center justify-center pt-2 pb-2 text-[#64748B]">
+      <div className="relative z-10 flex flex-col items-center justify-center pt-6 sm:pt-8 pb-3 text-slate-400">
         <a
           href="#about"
-          className="group inline-flex flex-col items-center gap-1 text-xs font-medium hover:text-[#123B8F] transition-colors"
+          className="group inline-flex flex-col items-center gap-1.5 text-xs font-medium hover:text-sky-300 transition-colors"
         >
-          <span className="tracking-wide text-[11px] uppercase tracking-wider font-mono-code">Scroll to explore</span>
-          <ChevronDown className="w-4 h-4 animate-bounce text-[#168BFF]" />
+          <span className="tracking-wide text-[11px] uppercase tracking-wider font-mono-code text-slate-400 group-hover:text-sky-300 transition-colors">Scroll to explore</span>
+          <ChevronDown className="w-4 h-4 animate-bounce text-[#38BDF8]" />
         </a>
       </div>
     </section>

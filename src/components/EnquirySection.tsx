@@ -181,9 +181,9 @@ export const EnquirySection: React.FC = () => {
               <button
                 type="submit"
                 id="btn-send-enquiry"
-                className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#123B8F] via-[#168BFF] to-[#123B8F] hover:bg-[length:200%_auto] text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-lg hover:shadow-xl hover:scale-[1.01] active:scale-95 transition-all cursor-pointer border border-blue-400/20"
+                className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#0EA5E9] via-[#2563EB] to-[#6366F1] text-white font-black text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-[0_10px_32px_-6px_rgba(14,165,233,0.55),0_0_20px_rgba(37,99,235,0.35)] hover:shadow-[0_16px_40px_-6px_rgba(14,165,233,0.75)] hover:scale-[1.01] active:scale-95 transition-all duration-300 cursor-pointer border border-cyan-300/35"
               >
-                <Send className="w-4 h-4 text-[#F5B82E]" />
+                <Send className="w-4 h-4 text-sky-200" />
                 <span>Send Enquiry Email Now</span>
               </button>
             </form>
@@ -260,16 +260,16 @@ export const EnquirySection: React.FC = () => {
 
               <div className="space-y-2">
                 <a
-                  href={`tel:${SYMPOSIUM_INFO.contacts[0].number}`}
-                  className="block p-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-xs sm:text-sm font-mono-code font-bold text-white transition-all"
+                  href={`tel:${SYMPOSIUM_INFO.staffConvenors[0].number}`}
+                  className="block p-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-xs font-mono-code font-bold text-white transition-all"
                 >
-                  📞 Student Coord: +91 {SYMPOSIUM_INFO.contacts[0].number}
+                  📞 Staff Convenor ({SYMPOSIUM_INFO.staffConvenors[0].name}): {SYMPOSIUM_INFO.staffConvenors[0].number}
                 </a>
                 <a
-                  href={`tel:${SYMPOSIUM_INFO.contacts[2].number}`}
-                  className="block p-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-xs sm:text-sm font-mono-code font-bold text-white transition-all"
+                  href={`tel:${SYMPOSIUM_INFO.studentCoordinators[1].number}`}
+                  className="block p-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-xs font-mono-code font-bold text-white transition-all"
                 >
-                  📞 Staff Coord: +91 {SYMPOSIUM_INFO.contacts[2].number}
+                  📞 Student Coord ({SYMPOSIUM_INFO.studentCoordinators[1].name}): {SYMPOSIUM_INFO.studentCoordinators[1].number}
                 </a>
               </div>
             </div>

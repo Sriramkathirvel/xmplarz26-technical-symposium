@@ -53,7 +53,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#111827] flex flex-col selection:bg-[#168BFF]/20 selection:text-[#123B8F] relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#030712] text-[#F9FAFB] flex flex-col selection:bg-[#38BDF8]/20 selection:text-[#38BDF8] relative overflow-x-hidden">
       {/* Short 2-3s Opening Animation (Plays once per session) */}
       {showOpeningAnimation && (
         <OpeningAnimation onComplete={handleAnimationComplete} />

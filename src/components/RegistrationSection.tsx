@@ -6,21 +6,14 @@ import {
   Wallet, 
   FileSpreadsheet, 
   CheckCircle2, 
-  AlertTriangle, 
   ClipboardList,
   QrCode,
-  Lightbulb,
-  SearchCheck,
   Sparkles,
-  Info,
   ChevronDown,
   ChevronUp,
-  Award,
-  Zap,
   Check,
   Copy,
-  ExternalLink,
-  ShieldCheck
+  ExternalLink
 } from 'lucide-react';
 import { SYMPOSIUM_INFO } from '../data/eventData';
 
@@ -149,7 +142,7 @@ export const RegistrationSection: React.FC = () => {
                     rel="noopener noreferrer"
                     id="btn-register-google-form"
                     onClick={handleRegisterClick}
-                    className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#0EA5E9] via-[#2563EB] to-[#6366F1] text-white text-sm font-black tracking-wide shadow-[0_10px_32px_-6px_rgba(14,165,233,0.55),0_0_20px_rgba(37,99,235,0.35)] hover:shadow-[0_16px_40px_-6px_rgba(14,165,233,0.75),0_0_30px_rgba(99,102,241,0.55)] hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 border border-cyan-300/35 group cursor-pointer"
+                    className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#0EA5E9] via-[#2563EB] to-[#6366F1] text-white text-sm font-black tracking-wide shadow-[0_10px_32px_-6px_rgba(14,165,233,0.55),0_0_20px_rgba(37,99,235,0.35)] hover:shadow-[0_16px_40px_-6px_rgba(14,165,233,0.75),0_0_30px_rgba(99,102,241,0.55)] hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 border-0 group cursor-pointer"
                   >
                     <FileSpreadsheet className="w-5 h-5 text-sky-200 group-hover:scale-110 transition-transform" />
                     <span>Register via Google Form</span>

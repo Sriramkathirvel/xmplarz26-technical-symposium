@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'motion/react';
-import { ArrowUpRight, ChevronDown, Calendar, Sparkles, ShieldCheck, MapPin, Tag } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, Calendar, Sparkles, MapPin, Tag } from 'lucide-react';
 import { SYMPOSIUM_INFO } from '../data/eventData';
 
 interface HeroSectionProps {
@@ -211,7 +211,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     onRegisterClick();
                   }
                 }}
-                className="relative group px-7 sm:px-9 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-[#0EA5E9] via-[#2563EB] to-[#6366F1] text-white text-sm sm:text-base font-black tracking-wide shadow-[0_10px_32px_-6px_rgba(14,165,233,0.55),0_0_20px_rgba(37,99,235,0.35)] hover:shadow-[0_16px_40px_-6px_rgba(14,165,233,0.75),0_0_30px_rgba(99,102,241,0.55)] hover:scale-[1.03] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 border border-cyan-300/35 overflow-hidden cursor-pointer w-full sm:w-auto"
+                className="relative group px-7 sm:px-9 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-[#0EA5E9] via-[#2563EB] to-[#6366F1] text-white text-sm sm:text-base font-black tracking-wide shadow-[0_10px_32px_-6px_rgba(14,165,233,0.55),0_0_20px_rgba(37,99,235,0.35)] hover:shadow-[0_16px_40px_-6px_rgba(14,165,233,0.75),0_0_30px_rgba(99,102,241,0.55)] hover:scale-[1.03] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 border-0 overflow-hidden cursor-pointer w-full sm:w-auto"
               >
                 {/* Shimmer sweep line */}
                 <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/25 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-in-out pointer-events-none" />

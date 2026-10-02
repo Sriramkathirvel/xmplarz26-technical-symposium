@@ -93,8 +93,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterClick }) => {
       id="main-navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'h-16 sm:h-20 bg-white/80 dark:bg-[#030712]/90 backdrop-blur-xl border-b border-[#E8EEF8] dark:border-slate-800/80 shadow-[0_4px_20px_-4px_rgba(18,59,143,0.08)] dark:shadow-md dark:shadow-blue-950/20'
-          : 'h-16 sm:h-20 bg-white/70 dark:bg-[#030712]/80 backdrop-blur-md border-b border-[#E8EEF8]/70 dark:border-slate-800/60 shadow-xs dark:shadow-none'
+          ? 'h-16 sm:h-20 bg-white/80 dark:bg-[#030712]/90 backdrop-blur-xl shadow-[0_4px_20px_-4px_rgba(18,59,143,0.08)] dark:shadow-md dark:shadow-blue-950/20'
+          : 'h-16 sm:h-20 bg-white/70 dark:bg-[#030712]/80 backdrop-blur-md shadow-xs dark:shadow-none'
       } flex items-center`}
     >
       {/* Symmetrical Container with Responsive Spacing */}
@@ -166,7 +166,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterClick }) => {
           {/* Right Actions: Responsive Registration CTA & Mobile Hamburger */}
           <div className="flex items-center gap-1.5 xs:gap-2 sm:gap-3 shrink-0">
 
-            {/* Minimalist Solid Pill CTA */}
+            {/* Redesigned Glassmorphic Cyber Pill CTA */}
             <a
               href="#register"
               id="nav-register-btn"
@@ -178,24 +178,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterClick }) => {
                   handleNavClick(e, '#register');
                 }
               }}
-              className="relative inline-flex items-center gap-1 xs:gap-1.5 sm:gap-2.5 bg-gradient-to-r from-[#0EA5E9] via-[#2563EB] to-[#4F46E5] text-white px-2.5 py-1.5 xs:px-3 xs:py-2 sm:px-4.5 sm:py-2.5 rounded-full text-[9px] xs:text-xs sm:text-xs xl:text-sm font-extrabold uppercase tracking-wider shadow-[0_4px_16px_-2px_rgba(14,165,233,0.4)] hover:shadow-[0_8px_25px_-4px_rgba(14,165,233,0.6)] hover:scale-[1.03] active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#38BDF8]/40 cursor-pointer shrink-0 group border border-white/20"
+              className="relative inline-flex items-center gap-1.5 xs:gap-2 sm:gap-2.5 bg-gradient-to-r from-[#0284C7] via-[#2563EB] to-[#7C3AED] text-white px-3 py-1.5 xs:px-3.5 xs:py-2 sm:px-4.5 sm:py-2 rounded-full text-[10px] xs:text-xs sm:text-xs xl:text-sm font-extrabold uppercase tracking-wider shadow-[0_4px_20px_-2px_rgba(14,165,233,0.45)] hover:shadow-[0_8px_28px_-4px_rgba(56,189,248,0.65)] hover:scale-[1.03] active:scale-95 transition-all duration-300 focus:outline-none cursor-pointer shrink-0 group border-0"
             >
               {/* Live Emerald Pulse Dot */}
-              <span className="relative flex h-1.5 w-1.5 sm:h-2.5 sm:w-2.5 shrink-0">
+              <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-80"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2.5 sm:w-2.5 bg-emerald-400 shadow-2xs"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-emerald-400 shadow-[0_0_8px_#34D399]"></span>
               </span>
 
               {/* Button Text - Adaptive for mobile */}
-              <span className="font-extrabold tracking-wide text-white whitespace-nowrap">
+              <span className="font-extrabold tracking-wider font-mono-code text-white whitespace-nowrap">
                 <span className="hidden xl:inline">REG OPEN • </span>
                 <span className="hidden sm:inline">REGISTER NOW</span>
                 <span className="sm:hidden">REGISTER</span>
               </span>
 
-              {/* Golden Arrow Circle Icon */}
-              <div className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5 rounded-full bg-[#F5B82E] text-slate-950 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-transform shrink-0 shadow-2xs">
-                <ArrowUpRight className="w-2 h-2 xs:w-2.5 xs:h-2.5 sm:w-3.5 sm:h-3.5 stroke-[2.5]" />
+              {/* Electric Cyan Arrow Circle Icon */}
+              <div className="w-4 h-4 xs:w-4.5 xs:h-4.5 sm:w-5 sm:h-5 rounded-full bg-gradient-to-tr from-[#38BDF8] to-[#60A5FA] text-slate-950 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-transform shrink-0 shadow-[0_0_10px_rgba(56,189,248,0.5)]">
+                <ArrowUpRight className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-3.5 sm:h-3.5 stroke-[2.8]" />
               </div>
             </a>
 

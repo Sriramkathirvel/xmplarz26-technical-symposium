@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Code, Sparkles, ShieldCheck } from 'lucide-react';
-import { TECHNICAL_EVENTS, NON_TECHNICAL_EVENTS, SYMPOSIUM_INFO } from '../data/eventData';
+import { ShieldCheck } from 'lucide-react';
+import { TECHNICAL_EVENTS, SYMPOSIUM_INFO } from '../data/eventData';
 import { EventCard } from './EventCard';
 import { WorkshopCard } from './WorkshopCard';
 import { EventModal } from './EventModal';
@@ -12,10 +11,7 @@ interface EventsSectionProps {
 }
 
 export const EventsSection: React.FC<EventsSectionProps> = ({ onRegisterClick }) => {
-  const [activeTab, setActiveTab] = useState<'technical' | 'non-technical'>('technical');
   const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null);
-
-  const currentEvents = activeTab === 'technical' ? TECHNICAL_EVENTS : NON_TECHNICAL_EVENTS;
 
   const handleModalRegister = (eventName: string) => {
     if (onRegisterClick) {
@@ -40,7 +36,7 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onRegisterClick })
             Symposium Challenges & Workshop
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black dark:text-white tracking-tight font-display mb-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-display mb-3">
             Choose your <span className="text-gradient-brand-handwriting text-4xl sm:text-5xl lg:text-6xl">challenge.</span>
           </h2>
 

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { OpeningAnimation } from './components/OpeningAnimation';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';

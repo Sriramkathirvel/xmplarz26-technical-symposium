@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { SYMPOSIUM_INFO } from '../data/eventData';
 import { CollegeLogo } from './CollegeLogo';
+import { CustomSelect } from './CustomSelect';
 
 export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -256,33 +257,36 @@ export const ContactSection: React.FC = () => {
                     Query Subject *
                   </label>
 
-                  <select
+                  <CustomSelect
                     id="contact-enquiry-subject"
-                    name="query_subject"
-                    required
+                    options={[
+                      { value: 'General Enquiry', label: 'General Enquiry' },
+                      {
+                        value: 'Paper Submission & IEEE Format',
+                        label: 'Paper Submission & IEEE Format',
+                      },
+                      {
+                        value: 'Registration & Fee Confirmation',
+                        label: 'Registration & Fee Confirmation',
+                      },
+                      {
+                        value: 'Technical Events Query',
+                        label: 'Technical Events Query',
+                      },
+                      {
+                        value: 'Non-Technical Events Query',
+                        label: 'Non-Technical Events Query',
+                      },
+                      {
+                        value: 'Campus Location & Travel',
+                        label: 'Campus Location & Travel',
+                      },
+                    ]}
                     value={formData.subject}
-                    onChange={(e) =>
-                      setFormData({ ...formData, subject: e.target.value })
+                    onChange={(val) =>
+                      setFormData({ ...formData, subject: val })
                     }
-                    className="w-full px-4 py-3 rounded-xl bg-[#F4F8FF]/50 border border-[#E8EEF8] text-sm text-[#111827] focus:bg-white focus:border-[#168BFF] focus:ring-2 focus:ring-[#168BFF]/20 outline-none transition-all cursor-pointer"
-                  >
-                    <option value="General Enquiry">General Enquiry</option>
-                    <option value="Paper Submission & IEEE Format">
-                      Paper Submission & IEEE Format
-                    </option>
-                    <option value="Registration & Fee Confirmation">
-                      Registration & Fee Confirmation
-                    </option>
-                    <option value="Technical Events Query">
-                      Technical Events Query
-                    </option>
-                    <option value="Non-Technical Events Query">
-                      Non-Technical Events Query
-                    </option>
-                    <option value="Campus Location & Travel">
-                      Campus Location & Travel
-                    </option>
-                  </select>
+                  />
                 </div>
 
               </div>
@@ -315,7 +319,7 @@ export const ContactSection: React.FC = () => {
                 type="submit"
                 id="contact-btn-send-enquiry"
                 disabled={isSending}
-                className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#0EA5E9] via-[#2563EB] to-[#6366F1] text-white font-black text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-[0_10px_32px_-6px_rgba(14,165,233,0.55),0_0_20px_rgba(37,99,235,0.35)] hover:shadow-[0_16px_40px_-6px_rgba(14,165,233,0.75)] hover:scale-[1.01] active:scale-95 transition-all duration-300 cursor-pointer border border-cyan-300/35 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="w-full py-4 rounded-2xl bg-gradient-to-r from-[#0EA5E9] via-[#2563EB] to-[#6366F1] text-white font-black text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-[0_10px_32px_-6px_rgba(14,165,233,0.55),0_0_20px_rgba(37,99,235,0.35)] hover:shadow-[0_16px_40px_-6px_rgba(14,165,233,0.75)] hover:scale-[1.01] active:scale-95 transition-all duration-300 cursor-pointer border-0 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <Send className="w-4 h-4 text-sky-200" />
                 <span>{isSending ? 'Sending...' : 'Send Enquiry Email'}</span>
@@ -559,7 +563,7 @@ export const ContactSection: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="scan-connect-btn-directions"
-                className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-[#0EA5E9] via-[#2563EB] to-[#6366F1] text-white font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-sky-500/30 hover:scale-[1.01] active:scale-95 transition-all duration-300 border border-cyan-300/35 cursor-pointer"
+                className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-[#0EA5E9] via-[#2563EB] to-[#6366F1] text-white font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-sky-500/30 hover:scale-[1.01] active:scale-95 transition-all duration-300 border-0 cursor-pointer"
               >
                 <span>Open Google Maps Directions</span>
                 <ExternalLink className="w-4 h-4 text-white" />

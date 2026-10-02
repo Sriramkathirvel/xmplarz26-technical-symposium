@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Calendar, Clock, Award, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { Clock, CheckCircle2, AlertTriangle } from 'lucide-react';
 import { IMPORTANT_DATES, SYMPOSIUM_INFO } from '../data/eventData';
 
 export const ImportantDates: React.FC = () => {

@@ -137,6 +137,12 @@ export const WORKSHOP_INFO = {
       role: "Head - People Strategy & Culture",
       company: "Amnet ContentSource",
       image: "/assets/vijay-manian.jpg"
+    },
+    {
+      name: "Sumithra Krishnan",
+      role: "Sr. Manager HR",
+      company: "Works Application (India)",
+      image: "/assets/sumithra-krishnan.jpg"
     }
   ]
 };

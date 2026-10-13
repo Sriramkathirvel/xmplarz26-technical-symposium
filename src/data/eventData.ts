@@ -12,7 +12,7 @@ export const SYMPOSIUM_INFO = {
   registrationFee: "₹250 per head",
   teamRequirement: "Maximum a student can participate in 2 technical events.",
   submissionStarts: "01.10.2026",
-  lastSubmissionDate: "13.10.2026",
+  lastSubmissionDate: "14.10.2026",
   onSpotRegistrationNotice: "On-spot registration is available",
   googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfcRJed2ZoWB2ZCeM6Isj-LOiQf5p56nhAyLjDfcluTxXIobQ/viewform?usp=publish-editor",
   registrationQrCodeUrl: "/assets/registration-qr.png",
@@ -149,7 +149,7 @@ export const WORKSHOP_INFO = {
 
 export const IMPORTANT_DATES: ImportantDate[] = [
   {
-    date: "13.10.2026",
+    date: "14.10.2026",
     title: "Registration Deadline",
     description: "Last date for online registration. (On-spot registration is available)"
   },

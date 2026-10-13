@@ -267,8 +267,8 @@ export const ImportantDates: React.FC = () => {
             <Clock className="w-4 h-4 text-[#168BFF]" />
             <span>Submissions close strictly at 11:59 PM on {SYMPOSIUM_INFO.lastSubmissionDate}.</span>
           </p>
-          <p className="text-xs sm:text-sm text-amber-700 dark:text-amber-300 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800/80 font-bold font-mono-code">
-            <AlertTriangle className="w-4 h-4 text-amber-500" />
+          <p className="text-xs sm:text-sm text-emerald-700 dark:text-emerald-300 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800/80 font-bold font-mono-code">
+            <CheckCircle2 className="w-4 h-4 text-emerald-500" />
             <span>Note: {SYMPOSIUM_INFO.onSpotRegistrationNotice}.</span>
           </p>
         </div>

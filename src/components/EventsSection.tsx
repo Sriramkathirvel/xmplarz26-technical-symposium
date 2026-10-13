@@ -73,7 +73,7 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onRegisterClick })
               <span className="font-bold text-[#111827] dark:text-white block sm:inline mr-2">
                 Official Rules & Regulations:
               </span>
-              Maximum a student can participate in 2 technical events. <span className="font-semibold text-amber-600 dark:text-amber-400">({SYMPOSIUM_INFO.onSpotRegistrationNotice})</span>
+              Maximum a student can participate in 2 technical events. <span className="font-semibold text-emerald-600 dark:text-emerald-400">({SYMPOSIUM_INFO.onSpotRegistrationNotice})</span>
             </div>
           </div>
 
